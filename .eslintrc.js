@@ -223,7 +223,7 @@ const sortClass = {
 const vue = {
   'vue/order-in-components': 'error',
   'vue/v-bind-style': ['error', 'shorthand'],
-  'vue/html-closing-bracket-newline': 'error',
+  'vue/html-closing-bracket-newline': ['error', {multiline: 'always'}],
   'vue/html-closing-bracket-spacing': 'error',
   'vue/prop-name-casing': 'error',
   // 'vue/script-indent': 'error',
