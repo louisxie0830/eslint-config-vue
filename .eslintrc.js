@@ -120,7 +120,7 @@ const jest = {
   'jest/no-focused-tests': 'error',
   'jest/no-hooks': 'error',
   'jest/no-identical-title': 'error',
-  // 'jest/no-jasmine-globals': 'error',
+  'jest/no-jasmine-globals': 'off', // off because of false positives currently
   'jest/no-jest-import': 'error',
   'jest/no-large-snapshots': 'error',
   'jest/no-test-prefixes': 'error',
@@ -227,7 +227,7 @@ const vue = {
   'vue/html-closing-bracket-newline': ['error', {multiline: 'always'}],
   'vue/html-closing-bracket-spacing': 'error',
   'vue/prop-name-casing': 'error',
-  // 'vue/script-indent': 'error',
+  'vue/script-indent': 'off', // off because of false positives currently
 };
 
 /** configuration */
