@@ -119,7 +119,7 @@ const jest = {
   'jest/no-focused-tests': 'error',
   'jest/no-hooks': 'error',
   'jest/no-identical-title': 'error',
-  'jest/no-jasmine-globals': 'error',
+  // 'jest/no-jasmine-globals': 'error',
   'jest/no-jest-import': 'error',
   'jest/no-large-snapshots': 'error',
   'jest/no-test-prefixes': 'error',
