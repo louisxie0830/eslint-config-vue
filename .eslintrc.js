@@ -100,6 +100,7 @@ const importExport = {
   'import/no-default-export': 'off',
   'import/no-self-import': 'error',
   'import/no-useless-path-segments': 'error',
+  'import/no-unresolved': ['error', {caseSensitive: false}],
   'import/no-extraneous-dependencies': [
     'error',
     {
