@@ -340,7 +340,7 @@ module.exports = {
   /**
    * @see {@link https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy|root}
    */
-  root: true,
+  root: false,
 
   /**
    * @see {@link https://eslint.org/docs/user-guide/configuring#configuring-rules|rules
