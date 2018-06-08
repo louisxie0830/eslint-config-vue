@@ -226,7 +226,7 @@ const vue = {
   'vue/html-closing-bracket-newline': 'error',
   'vue/html-closing-bracket-spacing': 'error',
   'vue/prop-name-casing': 'error',
-  'vue/script-indent': 'error',
+  // 'vue/script-indent': 'error',
 };
 
 /** configuration */
