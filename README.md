@@ -18,8 +18,8 @@ title="devDependency status">
 <img src="https://david-dm.org/ProReNata/eslint-config-vue/dev-status.svg"
 alt="devDependency status" height="18"/>
 </a>
-<a href="https://badge.fury.io/js/%40xotic750%2FProReNata/eslint-config-vue" title="npm version">
-<img src="https://badge.fury.io/js/%40xotic750%2FProReNata/eslint-config-vue.svg"
+<a href="https://badge.fury.io/js/ProReNata/eslint-config-vue" title="npm version">
+<img src="https://badge.fury.io/js/ProReNata/eslint-config-vue.svg"
 alt="npm version" height="18">
 </a>
 
