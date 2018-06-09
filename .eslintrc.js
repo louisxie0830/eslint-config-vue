@@ -10,10 +10,9 @@
  * @see {@link https://eslint.org/docs/rules/|rules}
  */
 const eslintAgreed = {
-  'global-require': 'warn',
-  'max-len': ['error', 130],
+  camelcase: ['error', {properties: 'never'}], // because Eketorps property names are camel_case
   'no-param-reassign': 'warn',
-  'sort-keys': 'off', // Will be maintained bu DevTools script.
+  'max-len': ['error', 130],
 };
 
 /**
@@ -29,26 +28,6 @@ const eslintComments = {
   'eslint-comments/no-unused-enable': 'error',
   'eslint-comments/no-restricted-disable': 'error',
   'eslint-comments/no-use': 'warn',
-};
-
-/**
- * ProReNatas Eslint rules that differ from previously defined.
- * @see {@link https://eslint.org/docs/rules/|rules}
- */
-const PRN = {
-  camelcase: ['error', {properties: 'never'}], // because Eketorps property names are camel_case
-  'vue/html-self-closing': [
-    'error',
-    {
-      html: {
-        component: 'never',
-        normal: 'never',
-        void: 'never',
-      },
-      svg: 'never',
-    },
-  ],
-  'vue/mustache-interpolation-spacing': ['error', 'never'],
 };
 
 /**
@@ -174,6 +153,7 @@ const lodash = {
   'lodash/prefer-over-quantifier': 'off',
   'lodash/prefer-some': 'off',
   'lodash/prefer-startswith': 'off',
+  'lodash/prefer-times': 'off',
 };
 
 /**
@@ -230,6 +210,18 @@ const vue = {
   'vue/html-closing-bracket-spacing': 'error',
   'vue/prop-name-casing': 'error',
   'vue/script-indent': 'off', // off because of false positives currently
+  'vue/html-self-closing': [
+    'error',
+    {
+      html: {
+        void: 'never',
+        normal: 'never',
+        component: 'never',
+      },
+      svg: 'never',
+      math: 'never',
+    },
+  ],
 };
 
 /** configuration */
@@ -300,7 +292,8 @@ module.exports = {
         'no-param-reassign': [
           'warn',
           {
-            ignorePropertyModificationsFor: ['state'],
+            props: true,
+            ignorePropertyModificationsFor: ['state', 'acc', 'e', 'ctx', 'req', 'request', 'res', 'response', '$scope'],
           },
         ],
       },
@@ -361,7 +354,6 @@ module.exports = {
     ...jsdoc,
     ...vue,
     ...eslintComments,
-    ...PRN,
     ...importExport,
     ...prettier,
     ...promise,
