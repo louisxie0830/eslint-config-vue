@@ -293,7 +293,7 @@ module.exports = {
           'warn',
           {
             props: true,
-            ignorePropertyModificationsFor: ['state', 'acc', 'e', 'ctx', 'req', 'request', 'res', 'response', '$scope'],
+            ignorePropertyModificationsFor: ['state', 'acc', 'e', 'ctx', 'req', 'request', 'res', 'response', '$scope', 'data'],
           },
         ],
       },
