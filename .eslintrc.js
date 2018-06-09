@@ -57,7 +57,7 @@ const classProperty = {
   'babel/new-cap': 'error',
   'babel/no-invalid-this': 'error',
   'babel/object-curly-spacing': 'error',
-  'babel/quotes': 'off',
+  'babel/quotes': ['error', 'single'],
   'babel/semi': 'error',
   'babel/no-unused-expressions': 'error',
 };
