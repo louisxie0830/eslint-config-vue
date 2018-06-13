@@ -11,7 +11,12 @@
  */
 const eslintAgreed = {
   camelcase: ['error', {properties: 'never'}], // because Eketorps property names are camel_case
-  'no-param-reassign': 'warn',
+  'no-param-reassign': [
+    'error',
+    {
+      props: false,
+    },
+  ],
   'max-len': ['error', 130],
 };
 
@@ -284,18 +289,6 @@ module.exports = {
       files: ['webpack.config.js', 'CreateProductionSourcemap.js'],
       rules: {
         'global-require': 'off',
-      },
-    },
-    {
-      files: ['store.js'],
-      rules: {
-        'no-param-reassign': [
-          'warn',
-          {
-            props: true,
-            ignorePropertyModificationsFor: ['state', 'acc', 'e', 'ctx', 'req', 'request', 'res', 'response', '$scope', 'data'],
-          },
-        ],
       },
     },
   ],
