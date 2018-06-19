@@ -291,6 +291,17 @@ module.exports = {
         'global-require': 'off',
       },
     },
+    {
+      files: ['store.js', 'utils.js'],
+      rules: {
+        'no-param-reassign': [
+          'warn',
+          {
+            ignorePropertyModificationsFor: ['state'],
+          },
+        ],
+      },
+    },
   ],
 
   /**
