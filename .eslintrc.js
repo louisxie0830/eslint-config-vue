@@ -84,15 +84,11 @@ const importExport = {
   'import/group-exports': 'off',
   'import/no-cycle': 'error',
   'import/no-default-export': 'off',
+  'import/no-relative-parent-imports': 'off', // off because of false positives currently
   'import/no-self-import': 'error',
   'import/no-useless-path-segments': 'error',
   'import/no-unresolved': 'error',
-  'import/no-extraneous-dependencies': [
-    'error',
-    {
-      devDependencies: ['webpack.*.js'],
-    },
-  ],
+  'import/no-extraneous-dependencies': 'error',
 };
 
 /**
@@ -219,12 +215,12 @@ const vue = {
     'error',
     {
       html: {
-        void: 'never',
-        normal: 'never',
         component: 'never',
+        normal: 'never',
+        void: 'never',
       },
-      svg: 'never',
       math: 'never',
+      svg: 'never',
     },
   ],
 };
@@ -274,8 +270,15 @@ module.exports = {
    */
   overrides: [
     {
-      files: ['postcss.config.js', 'webpack.config.js', 'webpackOttenbyPlugin.js', 'CreateProductionSourcemap.js'],
+      files: ['DevTools/**/*.js', '__tests__/**/*.{js,vue}'],
       rules: {
+        'promise/avoid-new': 'off',
+      },
+    },
+    {
+      files: ['DevTools/**/*.js', '__tests__/**/*.{js,vue}', 'postcss.config.js', 'webpack.*.js'],
+      rules: {
+        'global-require': 'off',
         'import/no-extraneous-dependencies': [
           'error',
           {
@@ -283,12 +286,6 @@ module.exports = {
           },
         ],
         'no-console': 'off',
-      },
-    },
-    {
-      files: ['webpack.config.js', 'CreateProductionSourcemap.js'],
-      rules: {
-        'global-require': 'off',
       },
     },
     {
@@ -347,20 +344,20 @@ module.exports = {
    */
   rules: {
     ...objectSpread,
-    ...eslintAgreed,
-    ...cssModules,
-    ...extendNative,
-    ...classProperty,
-    ...jest,
     ...lodash,
-    ...compat,
-    ...sortClass,
-    ...jsdoc,
-    ...vue,
     ...eslintComments,
     ...importExport,
+    ...jsdoc,
     ...prettier,
+    ...eslintAgreed,
+    ...jest,
     ...promise,
+    ...classProperty,
+    ...sortClass,
+    ...compat,
+    ...extendNative,
+    ...vue,
+    ...cssModules,
   },
 
   /**
