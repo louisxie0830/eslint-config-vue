@@ -210,7 +210,7 @@ const sortClass = {
  */
 const vue = {
   'vue/v-bind-style': ['error', 'shorthand'],
-  'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+  'vue/component-name-in-template-casing': ['error', 'kebab-case'],
   'vue/no-spaces-around-equal-signs-in-attribute': 'error',
   'vue/singleline-html-element-content-newline': [
     'error',
