@@ -96,6 +96,7 @@ const importExport = {
  * @see {@link https://github.com/jest-community/eslint-plugin-jest|plugin}
  */
 const jest = {
+  'jest/no-test-prefixes': 'error',
   'jest/consistent-test-it': 'error',
   'jest/lowercase-name': 'error',
   'jest/no-disabled-tests': 'error',
@@ -105,8 +106,11 @@ const jest = {
   'jest/no-jasmine-globals': 'off', // off because of false positives currently
   'jest/no-jest-import': 'error',
   'jest/no-large-snapshots': 'error',
-  'jest/no-test-prefixes': 'error',
+  'jest/expect-expect': 'error',
+  'jest/no-test-return-statement': 'error',
   'jest/prefer-expect-assertions': 'error',
+  'jest/prefer-inline-snapshots': 'error',
+  'jest/prefer-strict-equal': 'error',
   'jest/prefer-to-be-null': 'error',
   'jest/prefer-to-be-undefined': 'error',
   'jest/prefer-to-have-length': 'error',
@@ -120,14 +124,14 @@ const jest = {
  * @see {@link https://github.com/gajus/eslint-plugin-jsdoc|plugin}
  */
 const jsdoc = {
+  'jsdoc/require-param': 'warn',
   'jsdoc/require-hyphen-before-param-description': 'warn',
-  'jsdoc/check-param-names': 'warn',
   'jsdoc/check-types': 'warn',
   'jsdoc/newline-after-description': 'warn',
   'jsdoc/require-description-complete-sentence': 'warn',
   'jsdoc/require-example': 'off',
   'jsdoc/check-tag-names': 'warn',
-  'jsdoc/require-param': 'warn',
+  'jsdoc/check-param-names': 'warn',
   'jsdoc/require-param-description': 'warn',
   'jsdoc/require-param-type': 'warn',
   'jsdoc/require-returns-description': 'warn',
@@ -142,13 +146,13 @@ const jsdoc = {
  * @see {@link https://github.com/wix/eslint-plugin-lodash|plugin}
  */
 const lodash = {
+  'lodash/prefer-get': 'off',
   'lodash/prefer-lodash-typecheck': 'off',
-  'lodash/prefer-constant': 'off',
   'lodash/prefer-includes': 'off',
   'lodash/prefer-is-nil': 'warn',
   'lodash/prefer-lodash-chain': 'off',
   'lodash/prefer-lodash-method': 'off',
-  'lodash/prefer-get': 'off',
+  'lodash/prefer-constant': 'off',
   'lodash/prefer-matches': 'off',
   'lodash/prefer-noop': 'error',
   'lodash/prefer-over-quantifier': 'off',
@@ -205,8 +209,17 @@ const sortClass = {
  * @see {@link https://github.com/vuejs/eslint-plugin-vue|plugin}
  */
 const vue = {
-  'vue/order-in-components': 'error',
   'vue/v-bind-style': ['error', 'shorthand'],
+  'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+  'vue/no-spaces-around-equal-signs-in-attribute': 'error',
+  'vue/singleline-html-element-content-newline': [
+    'error',
+    {
+      ignoreWhenNoAttributes: true,
+    },
+  ],
+  'vue/order-in-components': 'error',
+  'vue/multiline-html-element-content-newline': 'error',
   'vue/html-closing-bracket-newline': ['error', {multiline: 'always'}],
   'vue/html-closing-bracket-spacing': 'error',
   'vue/prop-name-casing': 'error',
@@ -344,20 +357,20 @@ module.exports = {
    */
   rules: {
     ...objectSpread,
-    ...lodash,
-    ...eslintComments,
-    ...importExport,
     ...jsdoc,
     ...prettier,
     ...eslintAgreed,
-    ...jest,
+    ...importExport,
     ...promise,
     ...classProperty,
     ...sortClass,
     ...compat,
     ...extendNative,
+    ...eslintComments,
     ...vue,
+    ...lodash,
     ...cssModules,
+    ...jest,
   },
 
   /**
