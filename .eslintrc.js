@@ -11,6 +11,21 @@
  */
 const eslintAgreed = {
   camelcase: ['error', {properties: 'never'}], // because Eketorps property names are camel_case
+  curly: ['error', 'all'],
+  'padding-line-between-statements': [
+    'error',
+    {
+      blankLine: 'always',
+      prev: ['block', 'block-like', 'cjs-export', 'class', 'export', 'import'],
+      next: '*',
+    },
+    {blankLine: 'any', prev: 'import', next: 'import'},
+    {blankLine: 'any', prev: 'export', next: 'export'},
+    {blankLine: 'always', prev: 'import', next: 'export'},
+    {blankLine: 'always', prev: 'export', next: 'import'},
+    {blankLine: 'always', prev: '*', next: 'return'},
+    {blankLine: 'always', prev: '*', next: 'if'},
+  ],
   'no-param-reassign': [
     'error',
     {
@@ -33,6 +48,15 @@ const eslintComments = {
   'eslint-comments/no-unused-enable': 'error',
   'eslint-comments/no-restricted-disable': 'error',
   'eslint-comments/no-use': 'warn',
+};
+
+/**
+ * Switch-case-specific linting rules for ESLint.
+ * @see {@link https://github.com/lukeapage/eslint-plugin-switch-case|plugin}
+ */
+const eslintSwitchCase = {
+  'switch-case/no-case-curly': 'error',
+  'switch-case/newline-between-switch-case': ['error', 'always', {fallthrough: 'never'}],
 };
 
 /**
@@ -266,6 +290,7 @@ module.exports = {
     'plugin:lodash/recommended',
     'plugin:css-modules/recommended',
     'plugin:vue/recommended',
+    'plugin:switch-case/recommended',
   ],
 
   /**
@@ -344,6 +369,7 @@ module.exports = {
     'prettier',
     'promise',
     'sort-class-members',
+    'switch-case',
     'vue',
   ],
 
@@ -360,6 +386,7 @@ module.exports = {
     ...jsdoc,
     ...prettier,
     ...eslintAgreed,
+    ...eslintSwitchCase,
     ...importExport,
     ...promise,
     ...classProperty,
