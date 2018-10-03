@@ -70,6 +70,7 @@ const classProperty = {
   'babel/quotes': ['error', 'single', {avoidEscape: true}],
   'babel/semi': 'error',
   'babel/no-unused-expressions': 'error',
+  'babel/valid-typeof': 'error',
 };
 
 /**
@@ -120,6 +121,7 @@ const importExport = {
  * @see {@link https://github.com/jest-community/eslint-plugin-jest|plugin}
  */
 const jest = {
+  'jest/no-alias-methods': 'error',
   'jest/no-test-prefixes': 'error',
   'jest/consistent-test-it': 'error',
   'jest/lowercase-name': 'error',
@@ -138,6 +140,7 @@ const jest = {
   'jest/prefer-to-be-null': 'error',
   'jest/prefer-to-be-undefined': 'error',
   'jest/prefer-to-have-length': 'error',
+  'jest/require-tothrow-message': 'error',
   'jest/valid-describe': 'error',
   'jest/valid-expect-in-promise': 'error',
   'jest/valid-expect': 'error',
