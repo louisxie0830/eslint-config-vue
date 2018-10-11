@@ -311,12 +311,6 @@ module.exports = {
    */
   overrides: [
     {
-      files: ['DevTools/**/*.js', '__tests__/**/*.{js,vue}'],
-      rules: {
-        'promise/avoid-new': 'off',
-      },
-    },
-    {
       files: ['DevTools/**/*.js', '__tests__/**/*.{js,vue}', 'postcss.config.js', 'webpack.*.js'],
       rules: {
         'global-require': 'off',
@@ -327,6 +321,21 @@ module.exports = {
           },
         ],
         'no-console': 'off',
+      },
+    },
+    {
+      files: ['DevTools/**/*.js', '__tests__/**/*.{js,vue}', 'webpack.*.js'],
+      rules: {
+        'func-names': 'off',
+        'no-new-func': 'off',
+        'promise/avoid-new': 'off',
+      },
+    },
+    {
+      files: ['DevTools/**/*.js', 'webpack.*.js'],
+      rules: {
+        'no-restricted-globals': 'off',
+        strict: 'off',
       },
     },
     {
@@ -426,6 +435,6 @@ module.exports = {
         config: 'webpack.config.js',
       },
     },
-    polyfills: ['fetch', 'promises'],
+    polyfills: [],
   },
 };
