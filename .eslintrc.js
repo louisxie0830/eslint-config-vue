@@ -160,7 +160,7 @@ const jsdoc = {
   'jsdoc/require-example': 'off',
   'jsdoc/check-tag-names': 'warn',
   'jsdoc/check-param-names': 'warn',
-  'jsdoc/require-description': 'warn',
+  'jsdoc/require-description': 'off',
   'jsdoc/require-param-description': 'warn',
   'jsdoc/require-param-type': 'warn',
   'jsdoc/require-returns-description': 'warn',
