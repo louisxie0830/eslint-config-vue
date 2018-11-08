@@ -132,10 +132,12 @@ const jest = {
   'jest/no-jasmine-globals': 'off', // off because of false positives currently
   'jest/no-jest-import': 'error',
   'jest/no-large-snapshots': 'error',
+  'jest/no-test-callback': 'error',
   'jest/expect-expect': 'error',
   'jest/no-test-return-statement': 'error',
   'jest/prefer-expect-assertions': 'error',
   'jest/prefer-inline-snapshots': 'off',
+  'jest/prefer-spy-on': 'error',
   'jest/prefer-strict-equal': 'error',
   'jest/prefer-to-be-null': 'error',
   'jest/prefer-to-be-undefined': 'error',
