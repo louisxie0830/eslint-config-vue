@@ -145,6 +145,8 @@ const jest = {
   'jest/valid-describe': 'error',
   'jest/valid-expect-in-promise': 'error',
   'jest/valid-expect': 'error',
+  'jest/no-test-callback': 'error',
+  'jest/prefer-spy-on': 'off',
 };
 
 /**
