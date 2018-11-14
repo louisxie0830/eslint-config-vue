@@ -293,6 +293,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
+    'prettier/vue',
     'plugin:promise/recommended',
     'plugin:lodash/recommended',
     'plugin:css-modules/recommended',
