@@ -1,6 +1,6 @@
 {
   "name": "@prorenata/eslint-config-vue",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.2",
   "description": "ProReNata's Vue JS ESLint config.",
   "homepage": "https://github.com/ProReNata/eslint-config-vue",
   "author": {
@@ -16,10 +16,11 @@
     "test": "npm run --silent tests-only",
     "tests-only": "eslint index.js",
     "security": "npm audit",
+    "security-fix": "npm audit fix",
     "lint": "eslint -f 'node_modules/eslint-friendly-formatter' --ext .js,.json .",
     "lint-fix": "npm run lint -- --fix",
-    "precommit": "npm run tests-only && npm run security fix",
-    "prepush": "npm run tests-only && npm run security fix",
+    "precommit": "npm run tests-only && npm run security-fix",
+    "prepush": "npm run tests-only && npm run security-fix",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
   },
   "repository": {

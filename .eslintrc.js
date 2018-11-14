@@ -32,7 +32,7 @@ const eslintAgreed = {
       props: false,
     },
   ],
-  'max-len': ['error', 130],
+  // 'max-len': ['error', 130],
 };
 
 /**
@@ -240,33 +240,33 @@ const sortClass = {
  * @see {@link https://github.com/vuejs/eslint-plugin-vue|plugin}
  */
 const vue = {
-  'vue/v-bind-style': ['error', 'shorthand'],
+  // 'vue/v-bind-style': ['error', 'shorthand'],
   'vue/component-name-in-template-casing': ['error', 'kebab-case'],
-  'vue/no-spaces-around-equal-signs-in-attribute': 'error',
-  'vue/singleline-html-element-content-newline': [
-    'error',
-    {
-      ignoreWhenNoAttributes: true,
-    },
-  ],
-  'vue/order-in-components': 'error',
-  'vue/multiline-html-element-content-newline': 'error',
-  'vue/html-closing-bracket-newline': ['error', {multiline: 'always'}],
-  'vue/html-closing-bracket-spacing': 'error',
-  'vue/prop-name-casing': 'error',
-  'vue/script-indent': 'off', // off because of false positives currently
-  'vue/html-self-closing': [
-    'error',
-    {
-      html: {
-        component: 'never',
-        normal: 'never',
-        void: 'never',
-      },
-      math: 'never',
-      svg: 'never',
-    },
-  ],
+  // 'vue/no-spaces-around-equal-signs-in-attribute': 'error',
+  // 'vue/singleline-html-element-content-newline': [
+  //   'error',
+  //   {
+  //     ignoreWhenNoAttributes: true,
+  //   },
+  // ],
+  // 'vue/order-in-components': 'error',
+  // 'vue/multiline-html-element-content-newline': 'error',
+  // 'vue/html-closing-bracket-newline': ['error', {multiline: 'always'}],
+  // 'vue/html-closing-bracket-spacing': 'error',
+  // 'vue/prop-name-casing': 'error',
+  // 'vue/script-indent': 'off', // off because of false positives currently
+  // 'vue/html-self-closing': [
+  //   'error',
+  //   {
+  //     html: {
+  //       component: 'never',
+  //       normal: 'never',
+  //       void: 'never',
+  //     },
+  //     math: 'never',
+  //     svg: 'never',
+  //   },
+  // ],
 };
 
 /** configuration */
@@ -292,12 +292,12 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:jest/recommended',
+    'plugin:vue/recommended',
     'plugin:prettier/recommended',
     'prettier/vue',
     'plugin:promise/recommended',
     'plugin:lodash/recommended',
     'plugin:css-modules/recommended',
-    'plugin:vue/recommended',
     'plugin:switch-case/recommended',
   ],
 
@@ -352,6 +352,12 @@ module.exports = {
             ignorePropertyModificationsFor: ['state'],
           },
         ],
+      },
+    },
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off',
       },
     },
   ],
