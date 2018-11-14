@@ -19,7 +19,8 @@
     "lint": "eslint -f 'node_modules/eslint-friendly-formatter' --ext .js,.json .",
     "lint-fix": "npm run lint -- --fix",
     "precommit": "npm run tests-only && npm run security fix",
-    "prepush": "npm run tests-only && npm run security fix"
+    "prepush": "npm run tests-only && npm run security fix",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
   },
   "repository": {
     "type": "git",
