@@ -64,7 +64,7 @@ const eslintSwitchCase = {
  * @see {@link https://github.com/babel/eslint-plugin-babel|plugin}
  */
 const classProperty = {
-  'babel/camelcase': 'error',
+  'babel/camelcase': ['error', {properties: 'never'}], // because Eketorps property names are camel_case
   'babel/new-cap': 'error',
   'babel/no-invalid-this': 'error',
   'babel/object-curly-spacing': 'error',
