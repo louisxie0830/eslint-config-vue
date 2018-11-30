@@ -32,7 +32,6 @@ const eslintAgreed = {
       props: false,
     },
   ],
-  'max-len': ['error', 130],
 };
 
 /**
@@ -133,6 +132,7 @@ const jest = {
   'jest/no-jasmine-globals': 'off', // off because of false positives currently
   'jest/no-jest-import': 'error',
   'jest/no-large-snapshots': 'error',
+  'jest/no-truthy-falsy': 'error',
   'jest/expect-expect': 'error',
   'jest/no-test-return-statement': 'error',
   'jest/prefer-expect-assertions': 'error',
@@ -268,6 +268,7 @@ const vue = {
       svg: 'never',
     },
   ],
+  'vue/require-prop-type-constructor': 'off', // New rule currently buggy in 5.0.0.beta.3
 };
 
 /** configuration */
