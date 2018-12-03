@@ -268,7 +268,6 @@ const vue = {
       svg: 'never',
     },
   ],
-  'vue/require-prop-type-constructor': 'off', // New rule currently buggy in 5.0.0.beta.3
 };
 
 /** configuration */
