@@ -171,6 +171,8 @@ const jsdoc = {
   'jsdoc/no-undefined-types': 'warn',
   'jsdoc/require-param-name': 'warn',
   'jsdoc/valid-types': 'warn',
+  'jsdoc/check-examples': 'warn',
+  'jsdoc/require-returns': 'warn',
 };
 
 /**
